@@ -5,7 +5,7 @@
 Navigate to the project folder:
 cd <repository-name>
 
-Then run below clone command
+Then run below clone command <br/>
 git clone https://github.com/kirthigamerlin-creator/BookHaven.git
 
 
@@ -14,14 +14,14 @@ git clone https://github.com/kirthigamerlin-creator/BookHaven.git
 
 Ensure you are on the latest `main` branch:
 
-git checkout main
+git checkout main <br/>
 git pull origin main
 
 ## 3. Create a Feature Branch
 
 Create a new feature branch from `main`:
 
-git checkout -b feature/<feature-name>
+git checkout -b feature/**feature-name**
 
 Example:
 
@@ -35,7 +35,7 @@ The active branch will be marked with `*`.
 
 Example:
 
-* feature/user-login
+* feature/categories <br/>
   main
 
 ## 5. Make Changes and Commit
@@ -52,7 +52,7 @@ git commit -m "Add user login feature"
 
 Push the branch to the remote repository:
 
-git push -u origin feature/<feature-name>
+git push -u origin feature/**feature-name**
 
 Example:
 
@@ -73,13 +73,13 @@ git push -u origin feature/categories
 
 Use the following naming pattern:
 
-feature/<feature-name>
-bugfix/<bug-description>
-hotfix/<issue-name>
+feature/**feature-name** <br/>
+bugfix/**bug-description** <br/>
+hotfix/**issue-name** <br/>
 
 Examples:
 
-feature/book-search
-feature/cart-page
-bugfix/login-validation
-hotfix/payment-error
+feature/book-search <br/>
+feature/cart-page <br/>
+bugfix/login-validation <br/>
+hotfix/payment-error <br/>
