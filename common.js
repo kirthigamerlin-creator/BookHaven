@@ -2,9 +2,15 @@
 const loginBtn = document.getElementById("loginBtn");
 const modal = document.getElementById("modal");
 const closeBtn = document.getElementById("closeBtn");
+const loginMsgBox = document.getElementById('loginMsgBox');
+const signupMsgBox = document.getElementById('signupMsgBox');
+loginMsgBox.classList.add('hidden');
+signupMsgBox.classList.add('hidden');
 
 loginBtn.addEventListener("click", () => {
     modal.classList.add("show");
+    loginMsgBox.classList.add('hidden');
+    signupMsgBox.classList.add('hidden');
 });
 
 closeBtn.addEventListener("click", () => {
@@ -41,7 +47,7 @@ loginLink.addEventListener('click', () => {
 });
 
 /** password and confirma password match validation */
-const password = document.getElementById("password");
+const password = document.getElementById("signupPassword");
 const confirmPassword = document.getElementById("confirmPassword");
 
 const validatePassword = () => {
@@ -63,8 +69,8 @@ registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const name = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("signupEmail").value;
+    const password = document.getElementById("signupPassword").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
     if (password !== confirmPassword) {
@@ -76,7 +82,6 @@ registerForm.addEventListener("submit", (e) => {
     if (users && users.length > 0) {
         isUserExist = users.filter(user => user.email === email).length > 0;
     }
-    const msgBox = document.getElementById('signupMsgBox');
     if (!isUserExist) {
         users.push({
             name,
@@ -84,20 +89,20 @@ registerForm.addEventListener("submit", (e) => {
             password
         });
         localStorage.setItem('users', JSON.stringify(users));
-        msgBox.textContent = "Registration successful!";
-        msgBox.classList.add('success');
-        msgBox.classList.remove('error');
-        msgBox.classList.remove('hidden');
+        signupMsgBox.textContent = "Registration successful!";
+        signupMsgBox.classList.add('success');
+        signupMsgBox.classList.remove('error');
+        signupMsgBox.classList.remove('hidden');
         setTimeout(() => {
-            msgBox.classList.add('hidden');
+            signupMsgBox.classList.add('hidden');
         }, 5000);
     } else {
-        msgBox.textContent = "User already exists";
-        msgBox.classList.add('error');
-        msgBox.classList.remove('success');
-        msgBox.classList.remove('hidden');
+        signupMsgBox.textContent = "User already exists";
+        signupMsgBox.classList.add('error');
+        signupMsgBox.classList.remove('success');
+        signupMsgBox.classList.remove('hidden');
         setTimeout(() => {
-            msgBox.classList.add('hidden');
+            signupMsgBox.classList.add('hidden');
         }, 5000);
     }
     registerForm.reset();
@@ -108,7 +113,6 @@ const userName = document.getElementById('userName');
 
 /** check user has loggedin */
 const checkLoggedin = (userDetails) => {
-    const msgBox = document.getElementById('loginMsgBox');
     if (userDetails) {
         sessionStorage.setItem('loggedinUser', JSON.stringify(userDetails));
         loginForm.reset();
@@ -117,12 +121,12 @@ const checkLoggedin = (userDetails) => {
         userName.innerHTML = userDetails.name;
         modal.classList.remove("show");
     } else {
-        msgBox.textContent = "Invalid login details";
-        msgBox.classList.add('error');
-        msgBox.classList.remove('success');
-        msgBox.classList.remove('hidden');
+        loginMsgBox.textContent = "Invalid login details";
+        loginMsgBox.classList.add('error');
+        loginMsgBox.classList.remove('success');
+        loginMsgBox.classList.remove('hidden');
         setTimeout(() => {
-            msgBox.classList.add('hidden');
+            loginMsgBox.classList.add('hidden');
         }, 5000);
     }
 }
