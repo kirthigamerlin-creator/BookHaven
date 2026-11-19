@@ -216,7 +216,7 @@ body {
     scroll-snap-align: start;
 }
 
-.viewMoreCategory{
+.viewMoreCategory {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -224,12 +224,69 @@ body {
     margin-top: 25px;
 }
 
-.viewMoreCategory h1{
+.viewMoreCategory h1 {
+    color: #0B3A63;
+    margin-top: 10px;
+}
+
+.viewMoreCategory a {
+    color: #FF8C1A;
+}
+
+/* special section */
+.specialOffer {
+    color: #0B3A63;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.specialOffer h1 {
+    font-size: 2.6rem;
+}
+
+.specialOffer__container {
+    display: inline-flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    margin-top: 15px;
+    border: solid 5px #FF8C1A;
+}
+
+.specialOffer__items h2 {
+    margin-top: 10px;
+}
+
+
+/* reader review */
+.readersReview {
+    margin: 30px;
+    margin-top: 70px;
     color: #0B3A63;
 }
 
-.viewMoreCategory a{
-    color: #FF8C1A;
+.readersReview__container {
+    display: flex;
+    gap: 70px;
+}
+
+.readersReview__box {
+    width: 15%;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.readersReview__box--heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.readersReview__box--content {
+    margin-top: 5px;
+    border: solid 1px #0B3A63;
+    padding: 8px;
 }
 
 
