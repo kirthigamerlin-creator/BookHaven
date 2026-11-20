@@ -8,6 +8,7 @@
     <title>BookHaven</title>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -76,7 +77,96 @@
         </section>
 
         <!-- body section -->
-        <h1 style="text-align: center; margin: 15px;">Categories section</h1>
+        <h1 style="text-align: center; margin: 15px;" class="font-bold text-3xl">Categories section</h1>
+         <section class="books-banner">
+            <div class="books-text" style="background-color: #f8f0e5;padding: 5%;" >
+              <h1 class="font-bold text-3xl" style="color: tomato;">Discover your next favourite book.</h1>
+              <p class="text-xl">Explore amazing stories,gain knowledge and enjoy endless adventures.</p>
+             </div>
+           <div class="welcome-image">
+             <img src="images/book image.png" alt="Books" >
+           </div>
+        </section>
+           
+         <div class="breadcrumb mt-3 ml-3 ">
+            <span>Home</span>
+            <span> > </span>
+            <span>Categories</span>
+            <span> > </span>
+            <span id="categories" class="font-bold" style="color: orangered;">Select Categories</span>
+         </div>
+
+         <!--Books Items-->
+         <section class="book-card">
+            
+             <div class="category-card active" data-category="Fiction">
+                <span>📚</span>
+                <h2 style="margin: 8px 0 10px;font-size: 18px;">Fiction</h2>
+                <p>80+ Books</p>
+            </div>
+            <div class="category-card " data-category="Biography">
+                <span>🏛️</span>
+                <h2 style="margin: 8px 0 10px;font-size: 18px;">Biography</h2>
+                <p>30+ Books</p>
+            </div>
+            <div class="category-card " data-category="Technology">
+                <span>💻</span>
+                <h2 style="margin: 8px 0 10px;font-size: 18px;">Technology</h2>
+                <p>50+ Books</p>
+            </div>
+            <div class="category-card " data-category="Children">
+                <span>🧸</span>
+                <h2 style="margin: 8px 0 10px;font-size: 18px;">Children</h2>
+                <p>25+ Books</p>
+            </div>
+            <div class="category-card " data-category="Mystery">
+                <span>🔍</span>
+                <h2 style="margin: 8px 0 10px;font-size: 18px;">Mystery</h2>
+                <p>65+ Books</p>
+            </div>
+            <div class="category-card " data-category="Education">
+                <span>🎓</span>
+                <h2 style="margin: 8px 0 10px;font-size: 18px;">Education</h2>
+                <p>55+ Books</p>
+            </div>
+            <div class="category-card " data-category="Romance">
+                <span>❤️</span>
+                <h2 style="margin: 8px 0 10px;font-size: 18px;">Romance</h2>
+                <p>70+ Books</p>
+            </div>
+            <div class="category-card " data-category="Thriller">
+                 <span>🔮 </span>
+                <h2 style="margin: 8px 0 10px;font-size: 18px;">Thriller</h2>
+                <p>30+ Books</p>
+            </div>
+        </section>
+        <!----Books sections--->
+        <section class="book-section">
+
+        <div class="book-list">
+            <h2 id="book-title">Fiction Books</h2>
+            <p id="book-count">Showing Fiction books</p>
+        </div>
+
+        <div class="books-container" id="books-container">
+            <!-- Books added using JavaScript -->
+        </div>
+
+    </section>
+
+      <section class="offers ">
+    <div class="offer-image ">
+        <img src="./images/ad1.jpg">
+  </div>
+  <div class="one">
+    <h1 class="font-bold text-3xl">Limited Offers</h1>
+    <h2 class="text-2xl">35% OFF on  Your Favourite Books!!</h2>
+    <p class="text-gray-600">Discover amazing stories, explore new worlds.</p>
+    <button>Shop Now</button>
+  </div>
+</section>
+    
+
 
         <!-- footer section -->
         <footer class="footer">
@@ -151,6 +241,7 @@
         </div>
     </div>
     <script src="./common.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
