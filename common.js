@@ -7,6 +7,9 @@ const signupMsgBox = document.getElementById('signupMsgBox');
 loginMsgBox.classList.add('hidden');
 signupMsgBox.classList.add('hidden');
 
+const cartDetails = JSON.parse(sessionStorage.getItem('cartDetails') ?? '[]');
+document.querySelector('.cart-count').textContent = cartDetails.length;
+
 loginBtn.addEventListener("click", () => {
     modal.classList.add("show");
     loginMsgBox.classList.add('hidden');

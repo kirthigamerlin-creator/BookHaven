@@ -811,7 +811,7 @@ body {
 .cart-empty p{margin-bottom:16px}
 
 /* CSS-drawn covers: swap for <img> when you have cover images */
-.cart-cover{grid-row: span 2;width:120px;height:146px;border-radius:3px;padding:10px 8px;display:flex;flex-direction:column;
+.cart-cover{grid-row: span 2;width:120px;height:146px;border-radius:3px;display:flex;flex-direction:column;
   justify-content:space-between;text-align:center;box-shadow:3px 4px 10px rgba(0,0,0,.2);overflow:hidden}
 .cart-cover small{font-size:8px}
 .cart-cover em{font-size:9px;font-style:normal}
