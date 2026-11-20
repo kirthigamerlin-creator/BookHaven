@@ -91,7 +91,7 @@ body {
     gap: 1rem;
 }
 
-.cart-btn {
+.cart-btn-logo {
     position: relative;
     text-decoration: none;
     color: #0F4C81;
@@ -99,7 +99,7 @@ body {
     padding: 10px 16px;
 }
 
-.cart-btn i {
+.cart-btn-logo i {
     font-size: 24px;
 }
 
