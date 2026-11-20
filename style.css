@@ -152,6 +152,42 @@ body {
 .user-section.hidden {
     display: none;
 }
+#menuIcon {
+    display: none;
+}
+#sidenav {
+    position:fixed;
+    color: #FFF;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 1ms;
+    background-color:#1D232C; 
+    width: 50%; 
+    height: 100vh;
+    left: -50%;
+}
+.sidenav-close {
+    text-align: right;
+    padding: 1.25rem;
+}
+.sidenav-close p {
+    display: inline;
+    cursor: pointer;
+}
+#sidenav ul {
+    display: flex;
+    flex-direction: column; 
+    row-gap: 2.5rem;
+    padding-left: 1.25rem;
+    color: grey;
+    text-align: left;
+}
+#sidenav ul li a {
+    text-decoration: underline;
+}
 
 /* hero banner section */
 .hero {
@@ -493,4 +529,22 @@ body {
 .error {
     background-color: #e89d9d;
     border: 1px solid #dd1919;
+}
+
+/** media queries **/
+@media screen and (max-width: 800px) {
+    .navbar {
+        padding: 0 0.5rem;
+    }
+    .logo img {
+        width: 70px;
+    }
+    .nav-links {
+        display: none;
+    }
+    #menuIcon {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+    }
 }

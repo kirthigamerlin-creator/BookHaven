@@ -160,3 +160,16 @@ logout.addEventListener('click', () => {
     userSection.classList.add('hidden');
     userName.innerHTML = '';
 });
+
+/** Hamberger Menu */
+const sidenav = document.getElementById('sidenav');
+const menu = document.getElementById('menuIcon');
+const closenav = document.getElementById("closeNav");
+
+menu?.addEventListener('click', () => {
+    sidenav.style.left = 0;
+});
+
+closenav?.addEventListener('click', () => {
+    sidenav.style.left = '-50%';
+})
