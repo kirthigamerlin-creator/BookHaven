@@ -31,9 +31,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-                    <a href="./cart.html" class="cart-btn">
+                    <a href="./cart.html" class="cart-btn-logo">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-count">3</span>
+                        <span class="cart-count">0</span>
                     </a>
                     <!-- Show before login -->
                     <a href="#" class="login-btn" id="loginBtn">
@@ -86,71 +86,33 @@
 
             <div class="cart-layout">
                 <!-- items -->
-                <section class="cart-items" id="cartItems">
-
-                    <article class="cart-item" data-price="499">
-                        <div class="cart-cover cover-atomic"><small>Tiny Changes, Remarkable Results</small><strong>Atomic<br>Habits</strong><em>James Clear</em></div>
-                        <div class="cart-info">
-                            <h3>Atomic Habits</h3>
-                            <p class="cart-author">James Clear</p>
-                            <p class="cart-rating"><span class="cart-stars">★★★★★</span> 4.8 (1.2k)</p>
-                            <p class="cart-price"><b>₹499</b> <s>₹599</s></p>
-                        </div>
-                        <div class="cart-qty">
-                            <button class="minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
-                            <span>1</span>
-                            <button class="plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                        <button class="cart-remove"><i class="fa-regular fa-trash-can"></i> Remove</button>
-                    </article>
-
-                    <article class="cart-item" data-price="399">
-                        <div class="cart-cover cover-psych"><small>THE</small><strong>Psychology<br>of Money</strong><em>MORGAN HOUSEL</em></div>
-                        <div class="cart-info">
-                            <h3>The Psychology of Money</h3>
-                            <p class="cart-author">Morgan Housel</p>
-                            <p class="cart-rating"><span class="cart-stars">★★★★★</span> 4.7 (980)</p>
-                            <p class="cart-price"><b>₹399</b> <s>₹499</s></p>
-                        </div>
-                        <div class="cart-qty">
-                            <button class="minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
-                            <span>1</span>
-                            <button class="plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                        <button class="cart-remove"><i class="fa-regular fa-trash-can"></i> Remove</button>
-                    </article>
-
-                    <article class="cart-item" data-price="450">
-                        <div class="cart-cover cover-ikigai"><strong>IKIGAI</strong><em>The Japanese Secret to a Long and Happy Life</em></div>
-                        <div class="cart-info">
-                            <h3>Ikigai</h3>
-                            <p class="cart-author">Héctor García</p>
-                            <p class="cart-rating"><span class="cart-stars">★★★★★</span> 4.6 (850)</p>
-                            <p class="cart-price"><b>₹450</b> <s>₹550</s></p>
-                        </div>
-                        <div class="cart-qty">
-                            <button class="minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
-                            <span>1</span>
-                            <button class="plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                        <button class="cart-remove"><i class="fa-regular fa-trash-can"></i> Remove</button>
-                    </article>
-
-                    <div class="cart-empty" id="cartEmpty" hidden>
-                        <p>Your cart is empty.</p>
-                        <a href="./categories.html" class="cart-btn-outline">Browse books</a>
-                    </div>
-                </section>
+                <section class="cart-items" id="cartItems"></section>
 
                 <!-- order summary -->
                 <aside class="cart-summary">
                     <h2><i class="fa-regular fa-clipboard"></i> Order Summary</h2>
-                    <div class="sum-row"><span id="sumLabel">Items Subtotal (3)</span><span id="sumSubtotal">₹1,348</span></div>
-                    <div class="sum-row"><span>Shipping Charge</span><span id="sumShipping">₹50</span></div>
-                    <div class="sum-row sum-discount"><span>Discount</span><span id="sumDiscount">- ₹100</span></div>
-                    <div class="sum-row sum-total"><span>Total</span><span id="sumTotal">₹1,298</span></div>
-                    <button class="cart-btn-primary" id="checkoutBtn">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
-                    <a href="./categories.html" class="cart-btn-outline"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a>
+                    <div class="sum-row">
+                        <span id="sumLabel">Items Subtotal (3)</span>
+                        <span id="sumSubtotal">₹1,348</span>
+                    </div>
+                    <div class="sum-row">
+                        <span>Shipping Charge</span>
+                        <span id="sumShipping">₹50</span>
+                    </div>
+                    <div class="sum-row sum-discount">
+                        <span>Discount</span>
+                        <span id="sumDiscount">- ₹100</span>
+                    </div>
+                    <div class="sum-row sum-total">
+                        <span>Total</span>
+                        <span id="sumTotal">₹1,298</span>
+                    </div>
+                    <button class="cart-btn-primary" id="checkoutBtn">
+                        Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <a href="./categories.html" class="cart-btn-outline">
+                        <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+                    </a>
                     <blockquote>“A book is a dream that you hold in your hands.”<cite>— Neil Gaiman</cite></blockquote>
                 </aside>
             </div>
