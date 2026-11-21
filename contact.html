@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <title>BookHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header section -->
+        <header class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/logo_transparent.png" alt="BookHaven">
+                </div>
+
+                <nav class="nav-links">
+                    <a href="./">Home</a>
+                    <a href="./categories.html">Categories</a>
+                    <a href="./contact.html" class="active">Contact Us</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-8 h-8 md:hidden" id="menuIcon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+
+                    <a href="./cart.html" class="cart-btn-logo">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <!-- Show before login -->
+                    <a href="#" class="login-btn" id="loginBtn">
+                        Login
+                    </a>
+
+                    <!-- Show after login -->
+                    <div class="user-section hidden" id="userSection">
+
+                        <div class="user-greeting">
+                            <i class="fa-solid fa-user"></i>
+                            <span id="userName"></span>
+                        </div>
+
+                        <button class="logout-btn" id="logoutBtn">
+                            Logout
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--side nav section -->
+        <section id="sidenav">
+            <div class="sidenav-close">
+                <p id="closeNav">
+                    <i class="fa-solid fa-xmark"></i>
+                </p>
+            </div>
+            <ul>
+                <li>
+                    <a href="./">Home</a>
+                </li>
+                <li>
+                    <a href="./categories.html">Categories</a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="active">Contact Us</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- body section -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <p>
+                    Have a question, suggestion, or feedback?
+                    We'd love to hear from you.
+                </p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- footer section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h2>BookHaven</h2>
+                    <p>
+                        Read More. Be More.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="/">Home</a>
+                    <a href="./categories.html">Categories</a>
+                    <a href="./contact.html">Contact Us</a>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 BookHaven. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- modal popup -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <div id="loginSection">
+                <h2>Login</h2>
+                <p class="hidden msg-container" id="loginMsgBox"></p>
+                <form id="loginForm">
+                    <input type="email" placeholder="Email Address" id="email" required>
+                    <input type="password" placeholder="Password" id="password" required>
+                    <button type="submit" class="submit-btn">
+                        Login
+                    </button>
+                </form>
+                <p class="switch-text">
+                    Don't have an account?
+                    <a href="#" id="signup">Sign Up</a>
+                </p>
+            </div>
+            <div id="signupSection" class="hidden">
+                <h2>Signup</h2>
+                <p class="hidden msg-container" id="signupMsgBox"></p>
+                <form id="signupForm">
+                    <input type="text" placeholder="Name" required id="username">
+                    <input type="email" placeholder="Email Address" required id="signupEmail">
+                    <input type="password" placeholder="Password" id="signupPassword" required>
+                    <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
+                    <button type="submit" class="submit-btn">
+                        Create Account
+                    </button>
+                </form>
+                <p class="switch-text">
+                    You already have an account?
+                    <a href="#" id="login">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./common.js"></script>
+</body>
+
+</html>
