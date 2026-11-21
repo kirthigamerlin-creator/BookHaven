@@ -262,7 +262,7 @@ const categoryDetails = (selectedCategory) => {
         return book.category === selectedCategory;
     });
     displayBooks(filteredBooks);
-    bookTitle.innerText = "Fiction Books";
+    bookTitle.innerText = selectedCategory + " Books";
     bookCount.innerText = "Showing 1-" + filteredBooks.length + " " + filteredBooks.length + "books";
     categoryCards.forEach(function (item) {
         item.classList.remove("active");
@@ -277,7 +277,7 @@ categoryCards.forEach(function (card) {
             return book.category === selectedCategory;
         });
         displayBooks(filteredBooks);
-        bookTitle.innerText = "Fiction Books";
+        bookTitle.innerText = selectedCategory + " Books";
         bookCount.innerText = "Showing 1-" + filteredBooks.length + " " + filteredBooks.length + "books";
         categoryCards.forEach(function (item) {
             item.classList.remove("active");
